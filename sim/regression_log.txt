@@ -1,0 +1,133 @@
+Reading pref.tcl
+
+# 2020.1
+
+# do regression.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:47 on Jul 30,2026
+# vlog -sv ../tb/interface/axi4lite_if.sv 
+# -- Compiling interface axi4lite_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 14:58:47 on Jul 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:47 on Jul 30,2026
+# vlog -sv ../tb/interface/gpio_if.sv 
+# -- Compiling interface gpio_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 14:58:48 on Jul 30,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:48 on Jul 30,2026
+# vlog -sv ../tb/interface/timer_if.sv 
+# -- Compiling interface timer_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 14:58:48 on Jul 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:48 on Jul 30,2026
+# vlog -sv ../tb/interface/fifo_if.sv 
+# -- Compiling interface fifo_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 14:58:48 on Jul 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:48 on Jul 30,2026
+# vlog -sv ../tb/interface/irq_if.sv 
+# -- Compiling interface irq_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 14:58:48 on Jul 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:48 on Jul 30,2026
+# vlog -sv ../rtl/gpio.sv 
+# -- Compiling module gpio
+# 
+# Top level modules:
+# 	gpio
+# End time: 14:58:49 on Jul 30,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:49 on Jul 30,2026
+# vlog -sv ../rtl/timer.sv 
+# -- Compiling module timer
+# 
+# Top level modules:
+# 	timer
+# End time: 14:58:49 on Jul 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:49 on Jul 30,2026
+# vlog -sv ../rtl/fifo.sv 
+# -- Compiling module fifo
+# 
+# Top level modules:
+# 	fifo
+# End time: 14:58:49 on Jul 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:49 on Jul 30,2026
+# vlog -sv ../rtl/irq_aggregator.sv 
+# -- Compiling module irq_aggregator
+# 
+# Top level modules:
+# 	irq_aggregator
+# End time: 14:58:50 on Jul 30,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:50 on Jul 30,2026
+# vlog -sv ../rtl/axi4lite_wrapper.sv 
+# -- Compiling module axi4lite_wrapper
+# 
+# Top level modules:
+# 	axi4lite_wrapper
+# End time: 14:58:50 on Jul 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:50 on Jul 30,2026
+# vlog -sv ../rtl/address_decoder.sv 
+# -- Compiling module address_decoder
+# 
+# Top level modules:
+# 	address_decoder
+# End time: 14:58:50 on Jul 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:50 on Jul 30,2026
+# vlog -sv ../rtl/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:58:50 on Jul 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:51 on Jul 30,2026
+# vlog -sv ../tb/axi4lite_pkg.sv 
+# -- Compiling package axi4lite_pkg
+# ** Error: ../tb/axi4lite_pkg.sv(6): (vlog-13006) Could not find the package (uvm_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ../tb/axi4lite_pkg.sv(7): Cannot open `include file "uvm_macros.svh".
+# ** Error: ** while parsing file included at ../tb/axi4lite_pkg.sv(10)
+# ** at ../tb/seq_item/axi4lite_seq_item.sv(1): (vlog-13006) Could not find the package (uvm_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: (vlog-13069) ** while parsing file included at ../tb/axi4lite_pkg.sv(10)
+# ** at ../tb/seq_item/axi4lite_seq_item.sv(3): near "uvm_sequence_item": syntax error, unexpected IDENTIFIER.
+# ** Error: ** while parsing file included at ../tb/axi4lite_pkg.sv(10)
+# ** at ../tb/seq_item/axi4lite_seq_item.sv(3): Error in class extension specification.
+# End time: 14:58:51 on Jul 30,2026, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./run_uvm.do line 48
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../tb/axi4lite_pkg.sv"
+ModelSim> ^C

@@ -1,0 +1,19 @@
+Fitter Status : Successful - Sun Jul  5 18:22:33 2026
+Quartus Prime Version : 26.1.0 Build 110 03/26/2026 SC Pro Edition
+Revision Name : axi4lite_subsystem
+Top-level Entity Name : fpga_top
+Family : Cyclone 10 GX
+Device : 10CX220YF780I5G
+Timing Models : Final
+Power Models : Final
+Device Status : Final
+Logic utilization (in ALMs) : 499 / 80,330 ( < 1 % )
+Total registers : 699
+Total pins : 248 / 340 ( 73 % )
+Total virtual pins : 0
+Total block memory bits : 8,192 / 12,021,760 ( < 1 % )
+Total RAM Blocks : 1 / 587 ( < 1 % )
+Total DSP Blocks : 0 / 192 ( 0 % )
+Total HSSI RX channels : 0 / 12 ( 0 % )
+Total HSSI TX channels : 0 / 12 ( 0 % )
+Total PLLs : 0 / 30 ( 0 % )

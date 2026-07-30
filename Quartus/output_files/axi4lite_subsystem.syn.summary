@@ -1,0 +1,9 @@
+Synthesis Status : Successful - Sun Jul  5 18:20:56 2026
+Revision Name : axi4lite_subsystem
+Top-level Entity Name : fpga_top
+Family : Cyclone 10 GX
+Quartus Prime Version : 26.1.0 Build 110 03/26/2026 SC Pro Edition
+Device : 10CX220YF780I5G
+Logic utilization estimate (in ALMs) : 483 / 80,330 ( < 1 % )
+Total registers : 676
+Estimated DSP Blocks Post-Merging : 0

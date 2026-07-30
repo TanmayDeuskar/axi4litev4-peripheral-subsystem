@@ -1,0 +1,545 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2026  Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Altera and sold by Altera or its authorized distributors.  Please
+# refer to the Altera Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+# Date created = 14:52:13  July 05, 2026
+#
+# -------------------------------------------------------------------------- #
+set_global_assignment -name FAMILY "Cyclone 10 GX"
+set_global_assignment -name TOP_LEVEL_ENTITY fpga_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 26.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:52:13  JULY 05, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "26.1.0 Pro Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name DEVICE 10CX220YF780I5G
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name SDC_FILE rtl/contraints.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/timer_if.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/timer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/irq_if.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/irq_aggregator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/gpio_if.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/gpio.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fpga_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fifo_if.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fifo.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/axi4lite_wrapper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/axi4lite_if.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/address_decoder.sv
+set_location_assignment PIN_U4 -to AWADDR[25] -comment IOBANK_3B
+set_location_assignment PIN_AA12 -to gpio_out[11] -comment IOBANK_2A
+set_location_assignment PIN_D14 -to RDATA[31] -comment IOBANK_2K
+set_location_assignment PIN_J20 -to irq_status[2] -comment IOBANK_2L
+set_location_assignment PIN_J22 -to irq_status[1] -comment IOBANK_2L
+set_location_assignment PIN_G20 -to irq_status[0] -comment IOBANK_2L
+set_location_assignment PIN_AA11 -to gpio_out[31] -comment IOBANK_2A
+set_location_assignment PIN_AE19 -to gpio_out[30] -comment IOBANK_2A
+set_location_assignment PIN_AD12 -to gpio_out[29] -comment IOBANK_2A
+set_location_assignment PIN_AB15 -to gpio_out[28] -comment IOBANK_2A
+set_location_assignment PIN_AD14 -to gpio_out[27] -comment IOBANK_2A
+set_location_assignment PIN_AE17 -to gpio_out[26] -comment IOBANK_2A
+set_location_assignment PIN_AE11 -to gpio_out[25] -comment IOBANK_2A
+set_location_assignment PIN_AE14 -to gpio_out[24] -comment IOBANK_2A
+set_location_assignment PIN_AF12 -to gpio_out[23] -comment IOBANK_2A
+set_location_assignment PIN_AD15 -to gpio_out[22] -comment IOBANK_2A
+set_location_assignment PIN_AE16 -to gpio_out[21] -comment IOBANK_2A
+set_location_assignment PIN_Y15 -to gpio_out[20] -comment IOBANK_2A
+set_location_assignment PIN_AD18 -to gpio_out[19] -comment IOBANK_2A
+set_location_assignment PIN_AC17 -to gpio_out[18] -comment IOBANK_2A
+set_location_assignment PIN_AC11 -to gpio_out[17] -comment IOBANK_2A
+set_location_assignment PIN_AF18 -to gpio_out[16] -comment IOBANK_2A
+set_location_assignment PIN_AD19 -to gpio_out[15] -comment IOBANK_2A
+set_location_assignment PIN_AF11 -to gpio_out[14] -comment IOBANK_2A
+set_location_assignment PIN_AC16 -to gpio_out[13] -comment IOBANK_2A
+set_location_assignment PIN_AD20 -to gpio_out[12] -comment IOBANK_2A
+set_location_assignment PIN_AG16 -to gpio_out[10] -comment IOBANK_2A
+set_location_assignment PIN_AC13 -to gpio_out[9] -comment IOBANK_2A
+set_location_assignment PIN_AC15 -to gpio_out[8] -comment IOBANK_2A
+set_location_assignment PIN_AB14 -to gpio_out[7] -comment IOBANK_2A
+set_location_assignment PIN_A24 -to gpio_out[6] -comment IOBANK_2K
+set_location_assignment PIN_A23 -to gpio_out[5] -comment IOBANK_2K
+set_location_assignment PIN_D15 -to gpio_out[4] -comment IOBANK_2K
+set_location_assignment PIN_E15 -to gpio_out[3] -comment IOBANK_2K
+set_location_assignment PIN_B20 -to gpio_out[2] -comment IOBANK_2K
+set_location_assignment PIN_A18 -to gpio_out[1] -comment IOBANK_2K
+set_location_assignment PIN_B21 -to gpio_out[0] -comment IOBANK_2K
+set_location_assignment PIN_G18 -to gpio_oe[31] -comment IOBANK_2L
+set_location_assignment PIN_D23 -to gpio_oe[30] -comment IOBANK_2L
+set_location_assignment PIN_E20 -to gpio_oe[29] -comment IOBANK_2L
+set_location_assignment PIN_F22 -to gpio_oe[28] -comment IOBANK_2L
+set_location_assignment PIN_H21 -to gpio_oe[27] -comment IOBANK_2L
+set_location_assignment PIN_C16 -to gpio_oe[26] -comment IOBANK_2L
+set_location_assignment PIN_H16 -to gpio_oe[25] -comment IOBANK_2L
+set_location_assignment PIN_H17 -to gpio_oe[24] -comment IOBANK_2L
+set_location_assignment PIN_F18 -to gpio_oe[23] -comment IOBANK_2L
+set_location_assignment PIN_G21 -to gpio_oe[22] -comment IOBANK_2L
+set_location_assignment PIN_AB16 -to gpio_oe[21] -comment IOBANK_2A
+set_location_assignment PIN_AA16 -to gpio_oe[20] -comment IOBANK_2A
+set_location_assignment PIN_AG14 -to gpio_oe[19] -comment IOBANK_2A
+set_location_assignment PIN_AG15 -to gpio_oe[18] -comment IOBANK_2A
+set_location_assignment PIN_AF17 -to gpio_oe[17] -comment IOBANK_2A
+set_location_assignment PIN_AF16 -to gpio_oe[16] -comment IOBANK_2A
+set_location_assignment PIN_AE12 -to gpio_oe[15] -comment IOBANK_2A
+set_location_assignment PIN_AA13 -to gpio_oe[14] -comment IOBANK_2A
+set_location_assignment PIN_AF14 -to gpio_oe[13] -comment IOBANK_2A
+set_location_assignment PIN_AF19 -to gpio_oe[12] -comment IOBANK_2A
+set_location_assignment PIN_Y16 -to gpio_oe[11] -comment IOBANK_2A
+set_location_assignment PIN_AF13 -to gpio_oe[10] -comment IOBANK_2A
+set_location_assignment PIN_AC18 -to gpio_oe[9] -comment IOBANK_2A
+set_location_assignment PIN_AB13 -to gpio_oe[8] -comment IOBANK_2A
+set_location_assignment PIN_AD13 -to gpio_oe[7] -comment IOBANK_2A
+set_location_assignment PIN_AE15 -to gpio_oe[6] -comment IOBANK_2A
+set_location_assignment PIN_AE20 -to gpio_oe[5] -comment IOBANK_2A
+set_location_assignment PIN_AD17 -to gpio_oe[4] -comment IOBANK_2A
+set_location_assignment PIN_AB11 -to gpio_oe[3] -comment IOBANK_2A
+set_location_assignment PIN_AG18 -to gpio_oe[2] -comment IOBANK_2A
+set_location_assignment PIN_AC12 -to gpio_oe[1] -comment IOBANK_2A
+set_location_assignment PIN_AA14 -to gpio_oe[0] -comment IOBANK_2A
+set_location_assignment PIN_AC3 -to gpio_in[31] -comment IOBANK_3A
+set_location_assignment PIN_AA3 -to gpio_in[30] -comment IOBANK_3A
+set_location_assignment PIN_AA4 -to gpio_in[29] -comment IOBANK_3A
+set_location_assignment PIN_Y7 -to gpio_in[28] -comment IOBANK_3A
+set_location_assignment PIN_AF3 -to gpio_in[27] -comment IOBANK_3A
+set_location_assignment PIN_AE2 -to gpio_in[26] -comment IOBANK_3A
+set_location_assignment PIN_W7 -to gpio_in[25] -comment IOBANK_3A
+set_location_assignment PIN_AC1 -to gpio_in[24] -comment IOBANK_3A
+set_location_assignment PIN_Y4 -to gpio_in[23] -comment IOBANK_3A
+set_location_assignment PIN_W4 -to gpio_in[22] -comment IOBANK_3A
+set_location_assignment PIN_AD4 -to gpio_in[21] -comment IOBANK_3A
+set_location_assignment PIN_AH2 -to gpio_in[20] -comment IOBANK_3A
+set_location_assignment PIN_AH3 -to gpio_in[19] -comment IOBANK_3A
+set_location_assignment PIN_AB1 -to gpio_in[18] -comment IOBANK_3A
+set_location_assignment PIN_AF6 -to gpio_in[17] -comment IOBANK_3A
+set_location_assignment PIN_Y1 -to gpio_in[16] -comment IOBANK_3A
+set_location_assignment PIN_AB6 -to gpio_in[15] -comment IOBANK_3A
+set_location_assignment PIN_AE6 -to gpio_in[14] -comment IOBANK_3A
+set_location_assignment PIN_AB5 -to gpio_in[13] -comment IOBANK_3A
+set_location_assignment PIN_AG1 -to gpio_in[12] -comment IOBANK_3A
+set_location_assignment PIN_AA9 -to gpio_in[11] -comment IOBANK_3A
+set_location_assignment PIN_AF1 -to gpio_in[10] -comment IOBANK_3A
+set_location_assignment PIN_AE4 -to gpio_in[9] -comment IOBANK_3A
+set_location_assignment PIN_W5 -to gpio_in[8] -comment IOBANK_3A
+set_location_assignment PIN_AC2 -to gpio_in[7] -comment IOBANK_3A
+set_location_assignment PIN_Y6 -to gpio_in[6] -comment IOBANK_3A
+set_location_assignment PIN_AA1 -to gpio_in[5] -comment IOBANK_3A
+set_location_assignment PIN_AD2 -to gpio_in[4] -comment IOBANK_3A
+set_location_assignment PIN_AC5 -to gpio_in[3] -comment IOBANK_3A
+set_location_assignment PIN_AB4 -to gpio_in[2] -comment IOBANK_3A
+set_location_assignment PIN_AA8 -to gpio_in[1] -comment IOBANK_3A
+set_location_assignment PIN_Y5 -to gpio_in[0] -comment IOBANK_3A
+set_location_assignment PIN_E17 -to combined_irq -comment IOBANK_2L
+set_location_assignment PIN_AE1 -to WVALID -comment IOBANK_3A
+set_location_assignment PIN_W8 -to WSTRB[3] -comment IOBANK_3A
+set_location_assignment PIN_AG3 -to WSTRB[2] -comment IOBANK_3A
+set_location_assignment PIN_AC7 -to WSTRB[1] -comment IOBANK_3A
+set_location_assignment PIN_Y2 -to WSTRB[0] -comment IOBANK_3A
+set_location_assignment PIN_C13 -to WREADY -comment IOBANK_2K
+set_location_assignment PIN_AB20 -to WDATA[31] -comment IOBANK_2J
+set_location_assignment PIN_AA19 -to WDATA[30] -comment IOBANK_2J
+set_location_assignment PIN_AA18 -to WDATA[29] -comment IOBANK_2J
+set_location_assignment PIN_Y20 -to WDATA[28] -comment IOBANK_2J
+set_location_assignment PIN_AF21 -to WDATA[27] -comment IOBANK_2J
+set_location_assignment PIN_AH11 -to WDATA[26] -comment IOBANK_2J
+set_location_assignment PIN_AB18 -to WDATA[25] -comment IOBANK_2J
+set_location_assignment PIN_AG20 -to WDATA[24] -comment IOBANK_2J
+set_location_assignment PIN_AA23 -to WDATA[23] -comment IOBANK_2J
+set_location_assignment PIN_Y19 -to WDATA[22] -comment IOBANK_2J
+set_location_assignment PIN_AH22 -to WDATA[21] -comment IOBANK_2J
+set_location_assignment PIN_AG9 -to WDATA[20] -comment IOBANK_2J
+set_location_assignment PIN_AF23 -to WDATA[19] -comment IOBANK_2J
+set_location_assignment PIN_AE21 -to WDATA[18] -comment IOBANK_2J
+set_location_assignment PIN_AH21 -to WDATA[17] -comment IOBANK_2J
+set_location_assignment PIN_AB21 -to WDATA[16] -comment IOBANK_2J
+set_location_assignment PIN_AH13 -to WDATA[15] -comment IOBANK_2J
+set_location_assignment PIN_AD22 -to WDATA[14] -comment IOBANK_2J
+set_location_assignment PIN_AH17 -to WDATA[13] -comment IOBANK_2J
+set_location_assignment PIN_AA22 -to WDATA[12] -comment IOBANK_2J
+set_location_assignment PIN_AE23 -to WDATA[11] -comment IOBANK_2J
+set_location_assignment PIN_AD23 -to WDATA[10] -comment IOBANK_2J
+set_location_assignment PIN_AC23 -to WDATA[9] -comment IOBANK_2J
+set_location_assignment PIN_AH15 -to WDATA[8] -comment IOBANK_2J
+set_location_assignment PIN_AF22 -to WDATA[7] -comment IOBANK_2J
+set_location_assignment PIN_AH10 -to WDATA[6] -comment IOBANK_2J
+set_location_assignment PIN_AB19 -to WDATA[5] -comment IOBANK_2J
+set_location_assignment PIN_W20 -to WDATA[4] -comment IOBANK_2J
+set_location_assignment PIN_AB23 -to WDATA[3] -comment IOBANK_2J
+set_location_assignment PIN_AA17 -to WDATA[2] -comment IOBANK_2J
+set_location_assignment PIN_AG19 -to WDATA[1] -comment IOBANK_2J
+set_location_assignment PIN_AH20 -to WDATA[0] -comment IOBANK_2J
+set_location_assignment PIN_E14 -to RVALID -comment IOBANK_2K
+set_location_assignment PIN_C8 -to RRESP[1] -comment IOBANK_2K
+set_location_assignment PIN_B11 -to RRESP[0] -comment IOBANK_2K
+set_location_assignment PIN_AB3 -to RREADY -comment IOBANK_3A
+set_location_assignment PIN_B19 -to RDATA[30] -comment IOBANK_2K
+set_location_assignment PIN_B14 -to RDATA[29] -comment IOBANK_2K
+set_location_assignment PIN_B26 -to RDATA[28] -comment IOBANK_2K
+set_location_assignment PIN_A9 -to RDATA[27] -comment IOBANK_2K
+set_location_assignment PIN_C11 -to RDATA[26] -comment IOBANK_2K
+set_location_assignment PIN_A21 -to RDATA[25] -comment IOBANK_2K
+set_location_assignment PIN_B15 -to RDATA[24] -comment IOBANK_2K
+set_location_assignment PIN_B18 -to RDATA[23] -comment IOBANK_2K
+set_location_assignment PIN_A11 -to RDATA[22] -comment IOBANK_2K
+set_location_assignment PIN_A14 -to RDATA[21] -comment IOBANK_2K
+set_location_assignment PIN_C15 -to RDATA[20] -comment IOBANK_2K
+set_location_assignment PIN_A19 -to RDATA[19] -comment IOBANK_2K
+set_location_assignment PIN_B25 -to RDATA[18] -comment IOBANK_2K
+set_location_assignment PIN_B10 -to RDATA[17] -comment IOBANK_2K
+set_location_assignment PIN_D10 -to RDATA[16] -comment IOBANK_2K
+set_location_assignment PIN_B9 -to RDATA[15] -comment IOBANK_2K
+set_location_assignment PIN_B13 -to RDATA[14] -comment IOBANK_2K
+set_location_assignment PIN_B8 -to RDATA[13] -comment IOBANK_2K
+set_location_assignment PIN_B16 -to RDATA[12] -comment IOBANK_2K
+set_location_assignment PIN_A17 -to RDATA[11] -comment IOBANK_2K
+set_location_assignment PIN_B23 -to RDATA[10] -comment IOBANK_2K
+set_location_assignment PIN_A22 -to RDATA[9] -comment IOBANK_2K
+set_location_assignment PIN_D13 -to RDATA[8] -comment IOBANK_2K
+set_location_assignment PIN_A13 -to RDATA[7] -comment IOBANK_2K
+set_location_assignment PIN_A16 -to RDATA[6] -comment IOBANK_2K
+set_location_assignment PIN_A8 -to RDATA[5] -comment IOBANK_2K
+set_location_assignment PIN_C12 -to RDATA[4] -comment IOBANK_2K
+set_location_assignment PIN_A12 -to RDATA[3] -comment IOBANK_2K
+set_location_assignment PIN_D9 -to RDATA[2] -comment IOBANK_2K
+set_location_assignment PIN_C20 -to RDATA[1] -comment IOBANK_2K
+set_location_assignment PIN_B24 -to RDATA[0] -comment IOBANK_2K
+set_location_assignment PIN_A27 -to BVALID -comment IOBANK_2K
+set_location_assignment PIN_A26 -to BRESP[1] -comment IOBANK_2K
+set_location_assignment PIN_C10 -to BRESP[0] -comment IOBANK_2K
+set_location_assignment PIN_AA2 -to BREADY -comment IOBANK_3A
+set_location_assignment PIN_AF2 -to AWVALID -comment IOBANK_3A
+set_location_assignment PIN_C21 -to AWREADY -comment IOBANK_2K
+set_location_assignment PIN_T9 -to AWADDR[31] -comment IOBANK_3B
+set_location_assignment PIN_H1 -to AWADDR[30] -comment IOBANK_3B
+set_location_assignment PIN_V6 -to AWADDR[29] -comment IOBANK_3B
+set_location_assignment PIN_L4 -to AWADDR[28] -comment IOBANK_3B
+set_location_assignment PIN_P3 -to AWADDR[27] -comment IOBANK_3B
+set_location_assignment PIN_P4 -to AWADDR[26] -comment IOBANK_3B
+set_location_assignment PIN_R1 -to AWADDR[24] -comment IOBANK_3B
+set_location_assignment PIN_V8 -to AWADDR[23] -comment IOBANK_3B
+set_location_assignment PIN_M4 -to AWADDR[22] -comment IOBANK_3B
+set_location_assignment PIN_R5 -to AWADDR[21] -comment IOBANK_3B
+set_location_assignment PIN_T7 -to AWADDR[20] -comment IOBANK_3B
+set_location_assignment PIN_M3 -to AWADDR[19] -comment IOBANK_3B
+set_location_assignment PIN_L2 -to AWADDR[18] -comment IOBANK_3B
+set_location_assignment PIN_M1 -to AWADDR[17] -comment IOBANK_3B
+set_location_assignment PIN_G1 -to AWADDR[16] -comment IOBANK_3B
+set_location_assignment PIN_U8 -to AWADDR[15] -comment IOBANK_3B
+set_location_assignment PIN_V3 -to AWADDR[14] -comment IOBANK_3B
+set_location_assignment PIN_V5 -to AWADDR[13] -comment IOBANK_3B
+set_location_assignment PIN_T4 -to AWADDR[12] -comment IOBANK_3B
+set_location_assignment PIN_T1 -to AWADDR[11] -comment IOBANK_3B
+set_location_assignment PIN_K4 -to AWADDR[10] -comment IOBANK_3B
+set_location_assignment PIN_R4 -to AWADDR[9] -comment IOBANK_3B
+set_location_assignment PIN_T6 -to AWADDR[8] -comment IOBANK_3B
+set_location_assignment PIN_Y17 -to AWADDR[7] -comment IOBANK_2J
+set_location_assignment PIN_AH12 -to AWADDR[6] -comment IOBANK_2J
+set_location_assignment PIN_AG11 -to AWADDR[5] -comment IOBANK_2J
+set_location_assignment PIN_AA21 -to AWADDR[4] -comment IOBANK_2J
+set_location_assignment PIN_AG23 -to AWADDR[3] -comment IOBANK_2J
+set_location_assignment PIN_AG21 -to AWADDR[2] -comment IOBANK_2J
+set_location_assignment PIN_AE22 -to AWADDR[1] -comment IOBANK_2J
+set_location_assignment PIN_AG13 -to AWADDR[0] -comment IOBANK_2J
+set_location_assignment PIN_AC6 -to ARVALID -comment IOBANK_3A
+set_location_assignment PIN_D8 -to ARREADY -comment IOBANK_2K
+set_location_assignment PIN_AA6 -to ARESETn -comment IOBANK_3A
+set_location_assignment PIN_AD3 -to ARADDR[31] -comment IOBANK_3A
+set_location_assignment PIN_J3 -to ARADDR[30] -comment IOBANK_3B
+set_location_assignment PIN_V1 -to ARADDR[29] -comment IOBANK_3B
+set_location_assignment PIN_N2 -to ARADDR[28] -comment IOBANK_3B
+set_location_assignment PIN_W2 -to ARADDR[27] -comment IOBANK_3B
+set_location_assignment PIN_T3 -to ARADDR[26] -comment IOBANK_3B
+set_location_assignment PIN_U5 -to ARADDR[25] -comment IOBANK_3B
+set_location_assignment PIN_P2 -to ARADDR[24] -comment IOBANK_3B
+set_location_assignment PIN_V2 -to ARADDR[23] -comment IOBANK_3B
+set_location_assignment PIN_T2 -to ARADDR[22] -comment IOBANK_3B
+set_location_assignment PIN_J2 -to ARADDR[21] -comment IOBANK_3B
+set_location_assignment PIN_L1 -to ARADDR[20] -comment IOBANK_3B
+set_location_assignment PIN_N3 -to ARADDR[19] -comment IOBANK_3B
+set_location_assignment PIN_K2 -to ARADDR[18] -comment IOBANK_3B
+set_location_assignment PIN_L3 -to ARADDR[17] -comment IOBANK_3B
+set_location_assignment PIN_V7 -to ARADDR[16] -comment IOBANK_3B
+set_location_assignment PIN_W3 -to ARADDR[15] -comment IOBANK_3B
+set_location_assignment PIN_T8 -to ARADDR[14] -comment IOBANK_3B
+set_location_assignment PIN_U1 -to ARADDR[13] -comment IOBANK_3B
+set_location_assignment PIN_R2 -to ARADDR[12] -comment IOBANK_3B
+set_location_assignment PIN_U3 -to ARADDR[11] -comment IOBANK_3B
+set_location_assignment PIN_H2 -to ARADDR[10] -comment IOBANK_3B
+set_location_assignment PIN_K1 -to ARADDR[9] -comment IOBANK_3B
+set_location_assignment PIN_U6 -to ARADDR[8] -comment IOBANK_3B
+set_location_assignment PIN_AC21 -to ARADDR[7] -comment IOBANK_2J
+set_location_assignment PIN_AC22 -to ARADDR[6] -comment IOBANK_2J
+set_location_assignment PIN_W21 -to ARADDR[5] -comment IOBANK_2J
+set_location_assignment PIN_AH16 -to ARADDR[4] -comment IOBANK_2J
+set_location_assignment PIN_N1 -to ARADDR[3] -comment IOBANK_3B
+set_location_assignment PIN_AG10 -to ARADDR[2] -comment IOBANK_2J
+set_location_assignment PIN_AH18 -to ARADDR[1] -comment IOBANK_2J
+set_location_assignment PIN_Y21 -to ARADDR[0] -comment IOBANK_2J
+set_location_assignment PIN_AA7 -to ACLK -comment IOBANK_3A
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[0] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[1] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[2] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[3] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[4] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[5] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[6] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[7] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[8] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[9] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[10] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[11] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[12] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[13] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[14] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[15] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[16] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[17] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[18] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[19] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[20] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[21] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[22] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[23] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[24] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[25] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[26] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[27] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[28] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[29] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[30] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARADDR[31] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARREADY -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARVALID -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[0] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[1] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[2] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[3] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[4] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[5] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[6] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[7] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[8] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[9] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[10] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[11] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[12] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[13] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[14] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[15] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[16] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[17] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[18] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[19] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[20] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[21] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[22] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[23] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[24] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[25] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[26] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[27] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[28] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[29] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[30] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWADDR[31] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWREADY -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to AWVALID -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to BREADY -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to BRESP[0] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to BRESP[1] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to BVALID -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[0] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[1] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[2] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[3] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[4] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[5] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[6] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[7] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[8] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[9] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[10] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[11] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[12] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[13] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[14] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[15] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[16] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[17] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[18] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[19] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[20] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[21] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[22] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[23] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[24] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[25] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[26] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[27] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[28] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[29] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[30] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RDATA[31] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RREADY -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RRESP[0] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RRESP[1] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to RVALID -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[0] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[1] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[2] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[3] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[4] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[5] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[6] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[7] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[8] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[9] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[10] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[11] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[12] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[13] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[14] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[15] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[16] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[17] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[18] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[19] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[20] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[21] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[22] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[23] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[24] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[25] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[26] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[27] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[28] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[29] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[30] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WDATA[31] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WREADY -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WSTRB[0] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WSTRB[1] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WSTRB[2] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WSTRB[3] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to WVALID -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to combined_irq -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[0] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[1] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[2] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[3] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[4] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[5] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[6] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[7] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[8] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[9] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[10] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[11] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[12] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[13] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[14] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[15] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[16] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[17] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[18] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[19] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[20] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[21] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[22] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[23] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[24] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[25] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[26] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[27] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[28] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[29] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[30] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_in[31] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[0] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[1] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[2] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[3] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[4] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[5] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[6] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[7] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[8] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[9] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[10] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[11] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[12] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[13] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[14] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[15] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[16] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[17] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[18] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[19] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[20] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[21] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[22] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[23] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[24] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[25] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[26] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[27] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[28] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[29] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[30] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_oe[31] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[0] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[1] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[2] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[3] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[4] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[5] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[6] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[7] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[8] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[9] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[10] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[11] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[12] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[13] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[14] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[15] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[16] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[17] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[18] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[19] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[20] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[21] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[22] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[23] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[24] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[25] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[26] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[27] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[28] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[29] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[30] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to gpio_out[31] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to irq_status[0] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to irq_status[1] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to irq_status[2] -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ACLK -entity fpga_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to ARESETn -entity fpga_top
+set_instance_assignment -name PARTITION_COLOUR 4294943817 -to fpga_top -entity fpga_top

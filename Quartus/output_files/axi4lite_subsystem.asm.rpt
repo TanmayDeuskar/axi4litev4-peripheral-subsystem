@@ -1,0 +1,127 @@
+Assembler report for axi4lite_subsystem
+Sun Jul  5 18:22:57 2026
+Quartus Prime Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Parallel Compilation
+  5. Assembler Messages
+  6. Assembler Generated Files
+  7. Assembler Device Options: D:/verilog_projects/quartus/axi4lite_subsystem/output_files/axi4lite_subsystem.sof
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2026  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Sun Jul  5 18:22:57 2026 ;
+; Revision Name         ; axi4lite_subsystem                    ;
+; Top-level Entity Name ; fpga_top                              ;
+; Family                ; Cyclone 10 GX                         ;
+; Device                ; 10CX220YF780I5G                       ;
+; Timing Models         ; Final                                 ;
+; Power Models          ; Final                                 ;
+; Device Status         ; Final                                 ;
++-----------------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Assembler Settings                                                                                 ;
++------------------------------------------------------------------+----------------+----------------+
+; Option                                                           ; Setting        ; Default Value  ;
++------------------------------------------------------------------+----------------+----------------+
+; Enable parallel Assembler and Timing Analyzer during compilation ; On             ; On             ;
+; Enable compact report table                                      ; Off            ; Off            ;
+; Design Assistant include IP blocks                               ; Off            ; Off            ;
+; High fanout net threshold for RAM inference                      ; 15             ; 15             ;
+; Design Assistant limit on reported violations per rule           ; 5000           ; 5000           ;
+; Generate compressed bitstreams                                   ; On             ; On             ;
+; Auto user code                                                   ; On             ; On             ;
+; Configuration device                                             ; Auto           ; Auto           ;
+; Voltage output format                                            ; Auto discovery ; Auto discovery ;
+; Translated voltage value unit                                    ; Volts          ; Volts          ;
+; Configuration device auto user code                              ; Off            ; Off            ;
+; Generate Partial Reconfiguration Raw Binary File (.rbf)          ; Off            ; Off            ;
+; Release clears before tri-states                                 ; Off            ; Off            ;
+; Auto-restart configuration after error                           ; On             ; On             ;
+; Enable OCT_DONE                                                  ; Off            ; Off            ;
+; Enable autonomous PCIe HIP mode                                  ; Off            ; Off            ;
+; Generate programming files                                       ; Off            ; Off            ;
+; Enables the HPS early release of HPS IO                          ; Off            ; Off            ;
++------------------------------------------------------------------+----------------+----------------+
+
+
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 20     ;
+; Maximum allowed            ; 14     ;
++----------------------------+--------+
+
+
++--------------------+
+; Assembler Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+    Info: Processing started: Sun Jul  5 18:22:46 2026
+    Info: System process ID: 16020
+Info: Command: quartus_asm --read_settings_files=on --write_settings_files=off axi4lite_subsystem -c axi4lite_subsystem
+Info (16677): Loading final database.
+Info (16734): Loading "final" snapshot for partition "root_partition".
+Info (16678): Successfully loaded final database: elapsed time is 00:00:02.
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 2020 megabytes
+    Info: Processing ended: Sun Jul  5 18:22:57 2026
+    Info: Elapsed time: 00:00:11
+    Info: System process ID: 16020
+
+
++------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                          ;
++------------------------------------------------------------------------------------+
+; File Name                                                                          ;
++------------------------------------------------------------------------------------+
+; D:/verilog_projects/quartus/axi4lite_subsystem/output_files/axi4lite_subsystem.sof ;
++------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/verilog_projects/quartus/axi4lite_subsystem/output_files/axi4lite_subsystem.sof ;
++----------------+---------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                     ;
++----------------+---------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0xFFFFFFFF                                                                                  ;
+; Checksum       ; 0x095F530C                                                                                  ;
+; Design hash    ; 9A2596A561ED8BAAEF65750993071287                                                            ;
++----------------+---------------------------------------------------------------------------------------------+
+
+

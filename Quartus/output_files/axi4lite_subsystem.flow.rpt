@@ -1,0 +1,122 @@
+Flow report for axi4lite_subsystem
+Sun Jul  5 18:22:57 2026
+Quartus Prime Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Flow Summary
+  2. Flow Settings
+  3. Flow Non-Default Global Settings
+  4. Flow Elapsed Time
+  5. Flow OS Summary
+  6. Flow Log
+  7. Legal Notice
+
+
+
++--------------------------------------------------------------------------+
+; Flow Summary                                                             ;
++-----------------------------+--------------------------------------------+
+; Flow Status                 ; Successful - Sun Jul  5 18:22:56 2026      ;
+; Quartus Prime Version       ; 26.1.0 Build 110 03/26/2026 SC Pro Edition ;
+; Revision Name               ; axi4lite_subsystem                         ;
+; Top-level Entity Name       ; fpga_top                                   ;
+; Family                      ; Cyclone 10 GX                              ;
+; Device                      ; 10CX220YF780I5G                            ;
+; Timing Models               ; Final                                      ;
+; Power Models                ; Final                                      ;
+; Device Status               ; Final                                      ;
+; Logic utilization (in ALMs) ; 499 / 80,330 ( < 1 % )                     ;
+; Total registers             ; 699                                        ;
+; Total pins                  ; 248 / 340 ( 73 % )                         ;
+; Total virtual pins          ; 0                                          ;
+; Total block memory bits     ; 8,192 / 12,021,760 ( < 1 % )               ;
+; Total RAM Blocks            ; 1 / 587 ( < 1 % )                          ;
+; Total DSP Blocks            ; 0 / 192 ( 0 % )                            ;
+; Total HSSI RX channels      ; 0 / 12 ( 0 % )                             ;
+; Total HSSI TX channels      ; 0 / 12 ( 0 % )                             ;
+; Total PLLs                  ; 0 / 30 ( 0 % )                             ;
++-----------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 07/05/2026 18:20:47 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; axi4lite_subsystem  ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                       ;
++--------------------------+-------------------------------------------------------------+--------------------+-------------+------------+
+; Assignment Name          ; Value                                                       ; Default Value      ; Entity Name ; Section Id ;
++--------------------------+-------------------------------------------------------------+--------------------+-------------+------------+
+; COMPILER_SIGNATURE_ID    ; 15659993022803.178325584721468                              ; --                 ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP   ; 100                                                         ; --                 ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP   ; -40                                                         ; --                 ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY ; D:/verilog_projects/quartus/axi4lite_subsystem/output_files ; --                 ; --          ; --         ;
+; TOP_LEVEL_ENTITY         ; fpga_top                                                    ; axi4lite_subsystem ; --          ; --         ;
++--------------------------+-------------------------------------------------------------+--------------------+-------------+------------+
+
+
++------------------------------------------------------+
+; Flow Elapsed Time                                    ;
++-----------------+--------------+---------------------+
+; Module Name     ; Elapsed Time ; Peak Virtual Memory ;
++-----------------+--------------+---------------------+
+; Synthesis       ; 00:00:11     ; 824 MB              ;
+; Fitter          ; 00:01:35     ; 3654 MB             ;
+; Timing Analyzer ; 00:00:07     ; 2087 MB             ;
+; Assembler       ; 00:00:10     ; 2019 MB             ;
+; Total           ; 00:02:03     ; --                  ;
++-----------------+--------------+---------------------+
+
+
++-------------------------------------------------------------------------------+
+; Flow OS Summary                                                               ;
++-----------------+------------------+------------+------------+----------------+
+; Module Name     ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++-----------------+------------------+------------+------------+----------------+
+; Synthesis       ; tanmayLT         ; Windows 11 ; 10.0.26200 ; x86_64         ;
+; Fitter          ; tanmayLT         ; Windows 11 ; 10.0.26200 ; x86_64         ;
+; Timing Analyzer ; tanmayLT         ; Windows 11 ; 10.0.26200 ; x86_64         ;
+; Assembler       ; tanmayLT         ; Windows 11 ; 10.0.26200 ; x86_64         ;
++-----------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_syn --read_settings_files=on --write_settings_files=off axi4lite_subsystem -c axi4lite_subsystem
+quartus_fit --read_settings_files=on --write_settings_files=off axi4lite_subsystem -c axi4lite_subsystem
+quartus_sta axi4lite_subsystem -c axi4lite_subsystem --mode=finalize
+quartus_asm --read_settings_files=on --write_settings_files=off axi4lite_subsystem -c axi4lite_subsystem
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2026  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+

@@ -1,0 +1,13 @@
+work/
+sim/work/
+*.wlf
+sim/transcript
+sim/*.vstf
+sim/*.ucdb
+modelsim.ini
+
+sim/*.vcd
+
+.vscode/
+Thumbs.db
+*.log

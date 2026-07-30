@@ -1,0 +1,461 @@
+Fitter Route Stage Report for axi4lite_subsystem
+Sun Jul  5 18:22:24 2026
+Quartus Prime Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Delay Chain Summary
+  3. Routing Usage Summary
+  4. Route Messages
+  5. Estimated Delay Added for Hold Timing Summary
+  6. Estimated Delay Added for Hold Timing Details
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2026  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                                                                                            ;
++---------------+----------+---------------------+--------------------+----------------+-----------------------------------+-------------------------------------+
+; Name          ; Pin Type ; Input Delay Chain 0 ; Output Delay Chain ; OE Delay Chain ; IO_12_LANE Input Data Delay Chain ; IO_12_LANE Input Strobe Delay Chain ;
++---------------+----------+---------------------+--------------------+----------------+-----------------------------------+-------------------------------------+
+; AWREADY       ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; WSTRB[0]      ; Input    ; --                  ; --                 ; --             ; --                                ; --                                  ;
+; WSTRB[1]      ; Input    ; --                  ; --                 ; --             ; --                                ; --                                  ;
+; WSTRB[2]      ; Input    ; --                  ; --                 ; --             ; --                                ; --                                  ;
+; WSTRB[3]      ; Input    ; --                  ; --                 ; --             ; --                                ; --                                  ;
+; WREADY        ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; BRESP[0]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; BRESP[1]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; BVALID        ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; ARREADY       ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[0]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[1]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[2]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[3]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[4]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[5]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[6]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[7]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[8]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[9]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[10]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[11]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[12]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[13]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[14]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[15]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[16]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[17]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[18]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[19]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[20]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[21]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[22]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[23]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[24]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[25]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[26]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[27]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[28]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[29]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[30]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RDATA[31]     ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RRESP[0]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RRESP[1]      ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; RVALID        ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[0]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[1]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[2]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[3]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[4]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[5]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[6]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[7]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[8]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[9]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[10]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[11]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[12]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[13]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[14]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[15]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[16]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[17]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[18]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[19]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[20]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[21]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[22]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[23]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[24]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[25]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[26]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[27]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[28]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[29]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[30]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_out[31]  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[0]    ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[1]    ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[2]    ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[3]    ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[4]    ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[5]    ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[6]    ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[7]    ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[8]    ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[9]    ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[10]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[11]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[12]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[13]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[14]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[15]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[16]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[17]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[18]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[19]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[20]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[21]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[22]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[23]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[24]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[25]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[26]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[27]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[28]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[29]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[30]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; gpio_oe[31]   ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; combined_irq  ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; irq_status[0] ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; irq_status[1] ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; irq_status[2] ; Output   ; --                  ; 0                  ; 0              ; --                                ; --                                  ;
+; BREADY        ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWVALID       ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WVALID        ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ACLK          ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARESETn       ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; RREADY        ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARVALID       ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[0]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[1]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[2]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[3]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[4]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[5]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[6]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[7]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[8]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[9]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[10]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[11]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[12]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[13]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[14]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[15]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[16]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[17]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[18]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[19]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[20]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[21]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[22]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[23]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[24]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[25]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[26]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[27]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[28]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[29]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[30]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; gpio_in[31]   ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[31]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[31]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[9]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[9]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[8]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[8]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[10]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[10]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[19]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[19]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[18]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[18]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[16]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[16]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[15]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[15]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[14]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[14]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[13]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[13]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[12]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[12]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[11]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[11]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[30]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[30]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[29]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[29]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[28]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[28]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[27]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[27]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[26]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[26]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[25]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[25]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[24]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[24]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[17]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[17]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[23]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[23]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[22]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[22]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[21]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[21]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[20]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[20]    ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[3]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[3]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[4]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[4]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[0]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[0]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[2]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[2]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[7]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[7]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[1]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[1]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[5]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[5]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; ARADDR[6]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; AWADDR[6]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[0]      ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[1]      ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[2]      ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[3]      ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[4]      ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[5]      ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[6]      ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[7]      ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[8]      ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[9]      ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[10]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[11]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[12]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[13]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[14]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[15]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[16]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[17]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[18]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[19]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[20]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[21]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[22]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[23]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[24]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[25]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[26]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[27]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[28]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[29]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[30]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; WDATA[31]     ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
++---------------+----------+---------------------+--------------------+----------------+-----------------------------------+-------------------------------------+
+
+
++----------------------------------------------------------+
+; Routing Usage Summary                                    ;
++------------------------------+---------------------------+
+; Routing Resource Type        ; Usage                     ;
++------------------------------+---------------------------+
+; Block interconnects          ; 2,309 / 664,374 ( < 1 % ) ;
+; C27 interconnects            ; 91 / 12,769 ( < 1 % )     ;
+; C4 interconnects             ; 2,054 / 514,392 ( < 1 % ) ;
+; Direct links                 ; 505 / 664,374 ( < 1 % )   ;
+; Global clocks                ; 2 / 32 ( 6 % )            ;
+; Periphery clocks             ; 0 / 410 ( 0 % )           ;
+; R3 interconnects             ; 689 / 246,936 ( < 1 % )   ;
+; R32 interconnects            ; 426 / 28,257 ( 2 % )      ;
+; R32/C27 interconnect drivers ; 175 / 74,920 ( < 1 % )    ;
+; R6 interconnects             ; 1,237 / 527,108 ( < 1 % ) ;
+; Regional clock lefts         ; 0 / 8 ( 0 % )             ;
+; Regional clock out bottoms   ; 0 / 8 ( 0 % )             ;
+; Regional clock out tops      ; 0 / 8 ( 0 % )             ;
+; Regional clock rights        ; 0 / 8 ( 0 % )             ;
+; Regional clocks              ; 0 / 8 ( 0 % )             ;
+; Spine buffers                ; 4 / 220 ( 2 % )           ;
+; Spine clocks                 ; 4 / 330 ( 1 % )           ;
+; Spine feedthroughs           ; 0 / 224 ( 0 % )           ;
++------------------------------+---------------------------+
+
+
++----------------+
+; Route Messages ;
++----------------+
+Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+    Info: Processing started: Sun Jul  5 18:20:58 2026
+    Info: System process ID: 4336
+Info: Command: quartus_fit --read_settings_files=on --write_settings_files=off axi4lite_subsystem -c axi4lite_subsystem
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = axi4lite_subsystem
+Info: Revision = axi4lite_subsystem
+Info (22300): Design uses Placement Effort Multiplier = 1.0.
+Info (170193): Fitter routing operations beginning
+Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
+    Info (170200): Optimizations that may affect the design's timing were skipped
+Info (25133): Total time spent on timing analysis during Routing is 0.15 seconds.
+Info (16607): Fitter routing operations ending: elapsed time is 00:00:18
+
+
++------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary              ;
++-----------------+----------------------+-------------------+
+; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
++-----------------+----------------------+-------------------+
+; clk             ; clk                  ; 60.8              ;
+; clk,I/O         ; clk                  ; 6.7               ;
++-----------------+----------------------+-------------------+
+Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
+This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                             ;
++---------------------------------------------------------+-----------------------------+-------------------+
+; Source Register                                         ; Destination Register        ; Delay Added in ns ;
++---------------------------------------------------------+-----------------------------+-------------------+
+; dut|timer1|reg_control[26]                              ; dut|wrapper|axiif.RDATA[26] ; 0.416             ;
+; dut|timer1|reg_control[24]                              ; dut|wrapper|axiif.RDATA[24] ; 0.407             ;
+; dut|timer1|reg_control[29]                              ; dut|wrapper|axiif.RDATA[29] ; 0.403             ;
+; dut|timer1|reg_control[18]                              ; dut|wrapper|axiif.RDATA[18] ; 0.402             ;
+; dut|timer1|reg_control[17]                              ; dut|wrapper|axiif.RDATA[17] ; 0.389             ;
+; dut|timer1|reg_control[20]                              ; dut|wrapper|axiif.RDATA[20] ; 0.383             ;
+; dut|gpio1|int_polarity_reg[6]                           ; dut|wrapper|axiif.RDATA[6]  ; 0.363             ;
+; dut|gpio1|int_polarity_reg[12]                          ; dut|wrapper|axiif.RDATA[12] ; 0.360             ;
+; dut|gpio1|int_polarity_reg[14]                          ; dut|wrapper|axiif.RDATA[14] ; 0.359             ;
+; dut|timer1|reg_control[25]                              ; dut|wrapper|axiif.RDATA[25] ; 0.357             ;
+; dut|gpio1|int_polarity_reg[1]                           ; dut|wrapper|axiif.RDATA[1]  ; 0.356             ;
+; dut|timer1|reg_control[2]                               ; dut|wrapper|axiif.RDATA[2]  ; 0.356             ;
+; dut|gpio1|int_polarity_reg[8]                           ; dut|wrapper|axiif.RDATA[8]  ; 0.354             ;
+; dut|gpio1|int_polarity_reg[31]                          ; dut|wrapper|axiif.RDATA[31] ; 0.354             ;
+; dut|gpio1|int_polarity_reg[5]                           ; dut|wrapper|axiif.RDATA[5]  ; 0.352             ;
+; dut|timer1|reg_control[31]                              ; dut|wrapper|axiif.RDATA[31] ; 0.351             ;
+; dut|gpio1|int_polarity_reg[9]                           ; dut|wrapper|axiif.RDATA[9]  ; 0.350             ;
+; dut|gpio1|int_polarity_reg[13]                          ; dut|wrapper|axiif.RDATA[13] ; 0.350             ;
+; dut|gpio1|int_polarity_reg[3]                           ; dut|wrapper|axiif.RDATA[3]  ; 0.349             ;
+; dut|timer1|reg_control[30]                              ; dut|wrapper|axiif.RDATA[30] ; 0.347             ;
+; dut|gpio1|int_polarity_reg[15]                          ; dut|wrapper|axiif.RDATA[15] ; 0.347             ;
+; dut|gpio1|int_polarity_reg[21]                          ; dut|wrapper|axiif.RDATA[21] ; 0.345             ;
+; dut|timer1|reg_control[14]                              ; dut|wrapper|axiif.RDATA[14] ; 0.344             ;
+; dut|gpio1|int_polarity_reg[19]                          ; dut|wrapper|axiif.RDATA[19] ; 0.344             ;
+; dut|gpio1|int_polarity_reg[2]                           ; dut|wrapper|axiif.RDATA[2]  ; 0.343             ;
+; dut|gpio1|int_polarity_reg[4]                           ; dut|wrapper|axiif.RDATA[4]  ; 0.343             ;
+; dut|timer1|reg_control[28]                              ; dut|wrapper|axiif.RDATA[28] ; 0.342             ;
+; dut|gpio1|int_polarity_reg[10]                          ; dut|wrapper|axiif.RDATA[10] ; 0.341             ;
+; dut|timer1|reg_control[21]                              ; dut|wrapper|axiif.RDATA[21] ; 0.341             ;
+; dut|gpio1|int_polarity_reg[20]                          ; dut|wrapper|axiif.RDATA[20] ; 0.338             ;
+; dut|gpio1|int_polarity_reg[17]                          ; dut|wrapper|axiif.RDATA[17] ; 0.334             ;
+; dut|timer1|reg_control[8]                               ; dut|wrapper|axiif.RDATA[8]  ; 0.333             ;
+; dut|timer1|reg_control[23]                              ; dut|wrapper|axiif.RDATA[23] ; 0.333             ;
+; dut|timer1|reg_control[6]                               ; dut|wrapper|axiif.RDATA[6]  ; 0.329             ;
+; dut|gpio1|int_polarity_reg[25]                          ; dut|wrapper|axiif.RDATA[25] ; 0.329             ;
+; dut|gpio1|int_polarity_reg[28]                          ; dut|wrapper|axiif.RDATA[28] ; 0.324             ;
+; dut|timer1|reg_control[9]                               ; dut|wrapper|axiif.RDATA[9]  ; 0.321             ;
+; dut|timer1|reg_control[27]                              ; dut|wrapper|axiif.RDATA[27] ; 0.319             ;
+; dut|timer1|reg_control[5]                               ; dut|wrapper|axiif.RDATA[5]  ; 0.317             ;
+; dut|timer1|reg_control[13]                              ; dut|wrapper|axiif.RDATA[13] ; 0.317             ;
+; dut|timer1|reg_control[12]                              ; dut|wrapper|axiif.RDATA[12] ; 0.317             ;
+; dut|fifo1|memory_rtl_0|auto_generated|ram_block1a2~reg0 ; dut|fifo1|prdata[2]         ; 0.314             ;
+; dut|fifo1|memory~35                                     ; dut|fifo1|prdata[2]         ; 0.314             ;
+; dut|fifo1|memory_rtl_0_bypass[19]                       ; dut|fifo1|prdata[2]         ; 0.314             ;
+; dut|timer1|reg_control[3]                               ; dut|wrapper|axiif.RDATA[3]  ; 0.314             ;
+; dut|timer1|reg_control[10]                              ; dut|wrapper|axiif.RDATA[10] ; 0.311             ;
+; dut|timer1|reg_control[19]                              ; dut|wrapper|axiif.RDATA[19] ; 0.304             ;
+; dut|timer1|reg_control[4]                               ; dut|wrapper|axiif.RDATA[4]  ; 0.303             ;
+; dut|wrapper|pwdata[2]                                   ; dut|gpio1|int_type_reg[2]   ; 0.303             ;
+; dut|timer1|reg_control[16]                              ; dut|wrapper|axiif.RDATA[16] ; 0.301             ;
+; dut|timer1|reg_control[22]                              ; dut|wrapper|axiif.RDATA[22] ; 0.299             ;
+; dut|timer1|reg_control[11]                              ; dut|wrapper|axiif.RDATA[11] ; 0.298             ;
+; dut|wrapper|pwdata[1]                                   ; dut|gpio1|int_type_reg[1]   ; 0.297             ;
+; dut|wrapper|pwdata[16]                                  ; dut|gpio1|int_type_reg[16]  ; 0.292             ;
+; dut|timer1|reg_control[7]                               ; dut|wrapper|axiif.RDATA[7]  ; 0.291             ;
+; dut|gpio1|data_out_reg[6]                               ; dut|wrapper|axiif.RDATA[6]  ; 0.285             ;
+; dut|wrapper|pwdata[15]                                  ; dut|timer1|reg_load[15]     ; 0.283             ;
+; dut|wrapper|pwdata[0]                                   ; dut|timer1|reg_status[0]    ; 0.282             ;
+; dut|gpio1|int_polarity_reg[18]                          ; dut|wrapper|axiif.RDATA[18] ; 0.280             ;
+; dut|fifo1|memory_rtl_0_bypass[31]                       ; dut|fifo1|prdata[14]        ; 0.278             ;
+; dut|timer1|reg_control[15]                              ; dut|wrapper|axiif.RDATA[15] ; 0.278             ;
+; dut|fifo1|memory_rtl_0_bypass[32]                       ; dut|fifo1|prdata[15]        ; 0.275             ;
+; dut|gpio1|int_polarity_reg[26]                          ; dut|wrapper|axiif.RDATA[26] ; 0.271             ;
+; dut|gpio1|int_polarity_reg[27]                          ; dut|wrapper|axiif.RDATA[27] ; 0.271             ;
+; dut|fifo1|memory_rtl_0_bypass[41]                       ; dut|fifo1|prdata[24]        ; 0.265             ;
+; dut|fifo1|memory_rtl_0_bypass[47]                       ; dut|fifo1|prdata[30]        ; 0.265             ;
+; dut|gpio1|int_polarity_reg[16]                          ; dut|wrapper|axiif.RDATA[16] ; 0.263             ;
+; dut|gpio1|int_polarity_reg[11]                          ; dut|wrapper|axiif.RDATA[11] ; 0.261             ;
+; dut|fifo1|memory_rtl_0_bypass[43]                       ; dut|fifo1|prdata[26]        ; 0.260             ;
+; dut|fifo1|memory_rtl_0_bypass[38]                       ; dut|fifo1|prdata[21]        ; 0.258             ;
+; dut|fifo1|memory_rtl_0_bypass[33]                       ; dut|fifo1|prdata[16]        ; 0.255             ;
+; dut|fifo1|memory_rtl_0_bypass[34]                       ; dut|fifo1|prdata[17]        ; 0.255             ;
+; dut|fifo1|memory_rtl_0_bypass[36]                       ; dut|fifo1|prdata[19]        ; 0.253             ;
+; dut|gpio1|int_polarity_reg[30]                          ; dut|wrapper|axiif.RDATA[30] ; 0.252             ;
+; dut|fifo1|memory_rtl_0_bypass[48]                       ; dut|fifo1|prdata[31]        ; 0.250             ;
+; dut|fifo1|memory_rtl_0_bypass[27]                       ; dut|fifo1|prdata[10]        ; 0.250             ;
+; dut|fifo1|memory_rtl_0_bypass[28]                       ; dut|fifo1|prdata[11]        ; 0.249             ;
+; dut|fifo1|memory_rtl_0_bypass[29]                       ; dut|fifo1|prdata[12]        ; 0.249             ;
+; dut|fifo1|memory_rtl_0_bypass[40]                       ; dut|fifo1|prdata[23]        ; 0.247             ;
+; dut|fifo1|memory_rtl_0_bypass[42]                       ; dut|fifo1|prdata[25]        ; 0.247             ;
+; dut|fifo1|control[22]                                   ; dut|fifo1|prdata[22]        ; 0.246             ;
+; dut|fifo1|memory_rtl_0_bypass[30]                       ; dut|fifo1|prdata[13]        ; 0.246             ;
+; dut|wrapper|pwdata[27]                                  ; dut|timer1|reg_load[27]     ; 0.245             ;
+; dut|fifo1|memory_rtl_0_bypass[26]                       ; dut|fifo1|prdata[9]         ; 0.244             ;
+; dut|gpio1|int_polarity_reg[23]                          ; dut|wrapper|axiif.RDATA[23] ; 0.244             ;
+; dut|gpio1|int_polarity_reg[29]                          ; dut|wrapper|axiif.RDATA[29] ; 0.244             ;
+; dut|fifo1|memory_rtl_0_bypass[37]                       ; dut|fifo1|prdata[20]        ; 0.243             ;
+; dut|gpio1|int_polarity_reg[24]                          ; dut|wrapper|axiif.RDATA[24] ; 0.240             ;
+; dut|fifo1|control[31]                                   ; dut|fifo1|prdata[31]        ; 0.239             ;
+; dut|fifo1|memory_rtl_0_bypass[39]                       ; dut|fifo1|prdata[22]        ; 0.239             ;
+; dut|fifo1|memory_rtl_0_bypass[45]                       ; dut|fifo1|prdata[28]        ; 0.239             ;
+; dut|wrapper|pwdata[6]                                   ; dut|timer1|reg_load[6]      ; 0.238             ;
+; dut|fifo1|thresh[5]                                     ; dut|fifo1|prdata[5]         ; 0.236             ;
+; dut|fifo1|thresh[6]                                     ; dut|fifo1|prdata[6]         ; 0.236             ;
+; dut|fifo1|memory_rtl_0_bypass[46]                       ; dut|fifo1|prdata[29]        ; 0.235             ;
+; dut|fifo1|control[13]                                   ; dut|fifo1|prdata[13]        ; 0.233             ;
+; dut|fifo1|thresh[7]                                     ; dut|fifo1|prdata[7]         ; 0.233             ;
+; dut|fifo1|control[0]                                    ; dut|fifo1|prdata[0]         ; 0.233             ;
+; dut|gpio1|data_out_reg[27]                              ; dut|wrapper|axiif.RDATA[27] ; 0.230             ;
+; dut|fifo1|thresh[3]                                     ; dut|fifo1|prdata[3]         ; 0.230             ;
++---------------------------------------------------------+-----------------------------+-------------------+
+Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
+
+
