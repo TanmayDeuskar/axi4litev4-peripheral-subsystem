@@ -196,7 +196,7 @@ class fifo_write_seq extends uvm_sequence #(axi4lite_seq_item);
     int unsigned max_entries = 15; 
     int unsigned num_entries;
     logic [31:0] thresh_val; 
-    logic        irq_en;  
+    logic irq_en;  
     logic [31:0] write_data[$];
  
     function new(string name = "fifo_write_seq");
