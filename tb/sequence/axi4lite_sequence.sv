@@ -297,7 +297,7 @@ class vseq_gpio_irq extends uvm_sequence;
  
     virtual gpio_if gpif; 
  
-    localparam logic [31:0] GPIO_BASE       = 32'h000;
+    localparam logic [31:0] GPIO_BASE = 32'h000;
     localparam logic [31:0] ADDR_INT_STATUS = GPIO_BASE + 32'h10;
  
     function new(string name = "vseq_gpio_irq");
