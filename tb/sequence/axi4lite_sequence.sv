@@ -193,7 +193,7 @@ class fifo_write_seq extends uvm_sequence #(axi4lite_seq_item);
  
     localparam logic [31:0] CTRL_INT_EN = 32'h1;
  
-    int unsigned max_entries = 15; 
+    int unsigned max_entries = 16; 
     int unsigned num_entries;
     logic [31:0] thresh_val; 
     logic irq_en;  
@@ -206,7 +206,7 @@ class fifo_write_seq extends uvm_sequence #(axi4lite_seq_item);
     function void randomise();
         num_entries = $urandom_range(1, max_entries);
         thresh_val  = $urandom_range(1, max_entries);
-        irq_en      = logic'($urandom_range(0, 1));
+        irq_en = logic'($urandom_range(0, 1));
     endfunction
  
     task body();
