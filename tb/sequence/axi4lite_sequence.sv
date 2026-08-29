@@ -14,7 +14,7 @@ class axi_write_seq extends uvm_sequence #(axi4lite_seq_item);
  
     logic [31:0] addr;
     logic [31:0] data;
-    logic [3:0]  strobe;   // defaults to full word, override if needed
+    logic [3:0]  strobe;   //defaults to full word
  
     function new(string name = "axi_write_seq");
         super.new(name);
