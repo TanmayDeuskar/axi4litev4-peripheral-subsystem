@@ -6,7 +6,7 @@ class axi4lite_driver extends uvm_driver #(axi4lite_seq_item);
 
     virtual axi4lite_if vif;
 
-    function new(string name = "axi4lite_driver", uvm_component parent = null);
+    function new(string   = "axi4lite_driver", uvm_component parent = null);
         super.new(name, parent);
     endfunction
 
